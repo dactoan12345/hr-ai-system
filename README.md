@@ -45,7 +45,7 @@ Hệ thống bao gồm các thành phần chính:
 Đầu tiên, hãy sao chép (clone) mã nguồn của dự án về máy của bạn:
 
 ```bash
-git clone [<URL_repository_cua_ban>](https://github.com/dactoan12345/hr-ai-system.git)
+git clone https://github.com/dactoan12345/hr-ai-system.git
 cd hr_ai_system
 ```
 
