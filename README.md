@@ -45,7 +45,7 @@ Hệ thống bao gồm các thành phần chính:
 Đầu tiên, hãy sao chép (clone) mã nguồn của dự án về máy của bạn:
 
 ```bash
-git clone <URL_repository_cua_ban>
+git clone [<URL_repository_cua_ban>](https://github.com/dactoan12345/hr-ai-system.git)
 cd hr_ai_system
 ```
 
@@ -86,36 +86,7 @@ SSL_CERT_PATH="/path/to/your/isrgrootx1.pem"
 PINECONE_API_KEY="YOUR_PINECONE_API_KEY_HERE"
 ```
 
-### 4\. Thiết lập Cơ sở dữ liệu
-
-Trước khi chạy, bạn cần đảm bảo các bảng trong database TiDB đã được tạo. Hãy chạy các lệnh SQL sau trên TiDB Cloud:
-
-```sql
--- Tạo bảng người dùng
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    fullname VARCHAR(255),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    hashed_password VARCHAR(255) NOT NULL
-);
-
--- Tạo bảng lịch sử tìm kiếm
-CREATE TABLE search_history (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    query_text TEXT,
-    enhanced_query TEXT,
-    intent VARCHAR(50),
-    search_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    search_results JSON,
-    FOREIGN KEY (user_id) REFERENCES users(id)
-);
-```
-
-*(Lưu ý: Bảng `cleaned_resumes` được giả định là đã có sẵn dữ liệu hồ sơ của bạn).*
-
-### 5\. Sử dụng
+### 4\. Sử dụng
 
 Hệ thống cần được chạy theo 2 bước:
 
