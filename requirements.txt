@@ -1,0 +1,11 @@
+sentence-transformers
+pandas
+torch
+google-generativeai
+nltk
+mysql-connector-python
+python-dotenv
+tqdm
+streamlit  # Thêm Streamlit
+pinecone
+passlib[bcrypt]

@@ -1,0 +1,15 @@
+# Môi trường ảo của Python
+.venv/
+venv/
+env/
+
+# File biến môi trường - Chứa API keys và mật khẩu
+.env
+
+# Thư mục cache của Python
+__pycache__/
+*.pyc
+
+# File cache của các IDE
+.vscode/
+.idea/
